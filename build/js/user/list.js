@@ -6,7 +6,7 @@ function listUsers(){
 		var users = JSON.parse(data)
 
 
-		$.get("/yelp-jquery/templates/listUsers.jade", function(data){
+		$.get("/yelp-jquery/templates/listUsers.jade", function(template){
 	
 			//render the template
 			var html = jade.render(template, {items: users})
