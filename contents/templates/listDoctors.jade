@@ -1,8 +1,28 @@
-each item in items
-    div.row 
-        div.six.columns
-            // onClick='viewDoctor("PFO7RF1xz4ZBuaq46KsLpA")'
+div.row
+    div.five.columns
+        strong= "Name"
+    div.two.columns
+        strong= "City"
+    div.one.columns
+        strong= "State"
+    div.one.columns
+        strong= "Stars"
+    div.three.columns
+        strong= "Appointment Required?"
+
+each item in items 
+    div.row
+        div.five.columns
             a(href="#", onClick='viewDoctor("' + item.business_id + '")')
-                = item.name          
-        div.six.columns
+                = item.name
+        div.two.columns
             = item.city
+        div.one.columns
+            = item.state
+        div.one.columns
+            = item.stars
+        div.three.columns
+            if (item.attributes["By Appointment Only"])
+                = "Yes"
+            else
+                = "No"
