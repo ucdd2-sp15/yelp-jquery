@@ -1,1 +1,28 @@
-h1= item.name
+h2= item.name
+
+div.row
+    h5= 'Yelping since: ' + item.yelping_since
+
+div.row
+    h5 User Stats
+div.two.columns
+div.ten.columns
+    div.row    
+        b= 'Review Count: '
+        = item.review_count
+    div.row
+        b= 'Average Rating: '
+        = item.average_stars
+    div.row
+        b= 'Friends: '
+        = item.friends.length
+    div.row
+        b= 'Fans: '
+        = item.fans
+    div.row
+        b= 'Compliments: '
+        div.three.columns
+        div.nine.columns
+            ul
+                each val, index in item.compliments
+                        li= index + ": " + val
