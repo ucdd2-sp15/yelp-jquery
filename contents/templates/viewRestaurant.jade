@@ -1,1 +1,55 @@
-h1= item.name
+h2= item.name
+
+div.row
+    h4=item.review_count + ' Reviews | ' + item.stars + ' Stars'
+
+div.row
+    div.four.columns
+        h5= "Status:"
+    div.three.columns
+        if item.open 
+            b="OPEN"
+        else
+            b="CLOSED"
+br
+
+div.row
+    div.four.columns
+        h5 Day 
+    div.four.columns 
+        h5 Open
+    div.four.columns
+        h5 Close
+
+    each day,index in item.hours
+        div.row
+            div.four.columns
+                b= index
+            div.four.columns
+                h6=day.open
+            div.four.columns
+                h6=day.close
+br
+
+div.row
+    h5="Address: "
+    div.eight.columns= item.full_address
+br
+
+div.row
+    h5= "More business info:"
+    for val, index in item.attributes
+        div.row
+            div.six.columns(align='right')
+                b= index    
+            div.six.columns
+                if typeof(val)=="object"                
+                    for val2, index2 in val
+                        if val2==true
+                            span.button=index2
+                else if val==true
+                    = "Yes"
+                else if val==false
+                    = "No"
+                else
+                    span.button= val
