@@ -1,0 +1,17 @@
+extends layout.jade
+
+block content
+  table.u-full-width
+    thead
+      tr
+        th Restaurant
+        th Stars
+    tbody
+    each item in items  
+      tr
+        td
+          b
+           a(href="#", onClick='viewRestaurant("' + item.business_id + '")')
+            =item.name
+          br
+        td= item.stars

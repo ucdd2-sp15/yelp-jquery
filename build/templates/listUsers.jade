@@ -1,0 +1,17 @@
+extends layout.jade
+block content
+    table.u-full-width
+        thead
+            tr
+                th Name
+                th Reviews
+                th Yelping Since
+        tbody
+        each item in items
+            tr
+                td(width="70%")
+                   b
+                    a(href="#", onClick='viewUser("' + item.id + '")')
+                      = item.name
+                td= item.review_count
+                td= item.yelping_since

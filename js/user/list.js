@@ -1,4 +1,0 @@
-function listUsers(){
-
-    alert('todo')
-}
