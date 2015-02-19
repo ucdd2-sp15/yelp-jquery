@@ -6,7 +6,7 @@ function listRestaurants(){
 
         var restaurants = JSON.parse(data);
 
-        $.get("/yelp-jquery/templates/listRestaurants.jade", function (template) {
+        $.get("/yelp-jquery/templates/listRestaurants.jade",  function (template) {
 
             //render the template
             var html = jade.render(template, { items: restaurants });
