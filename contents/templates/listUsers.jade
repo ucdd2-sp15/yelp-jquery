@@ -1,4 +1,3 @@
-extends layout.jade
 block content
     table.u-full-width
         thead
@@ -11,7 +10,7 @@ block content
             tr
                 td(width="70%")
                    b
-                    a(href="#", onClick='viewUser("' + item.id + '")')
+                    a(href="#", onClick='viewUser("' + item.user_id + '")')
                       = item.name
                 td= item.review_count
                 td= item.yelping_since
