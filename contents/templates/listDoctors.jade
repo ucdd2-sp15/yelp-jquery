@@ -1,8 +1,27 @@
-each item in items
-    div.row 
-        div.six.columns
-            // onClick='viewDoctor("PFO7RF1xz4ZBuaq46KsLpA")'
-            a(href="#", onClick='viewDoctor("' + item.business_id + '")')
-                = item.name          
-        div.six.columns
-            = item.city
+extends layout.jade
+
+// TODO: use the better template from the hackathon
+block content
+    div.row
+        div.five.columns 
+          b Name
+        div.two.columns 
+          b Open(Y/N)
+        div.four.columns 
+          b By Appointment Only(Y/N) 
+    each item in doctors
+        div.row
+            div.five.columns
+                b
+                 a(href="#", onClick='viewDoctor("' + item.business_id + '")')
+                    = item.name
+            div.two.columns
+                if item.open
+                    |Y
+                else
+                    |N
+            div.four.columns
+                if (item.attributes["By Appointment Only"])
+                    |Y
+                else
+                    |N
