@@ -1,6 +1,3 @@
-extends layout.jade
-
-// TODO: use the better template from the hackathon
 block content
     div.row
         div.five.columns 
@@ -9,7 +6,7 @@ block content
           b Open(Y/N)
         div.four.columns 
           b By Appointment Only(Y/N) 
-    each item in doctors
+    each item in items
         div.row
             div.five.columns
                 b
