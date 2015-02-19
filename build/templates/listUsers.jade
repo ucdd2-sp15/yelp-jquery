@@ -1,7 +1,6 @@
 each item in items
-    div.row
+    div.row 
         div.six.columns
             a(href="#", onClick='viewUser("' + item.user_id + '")')
-                = item.name
+                = item.name          
         div.six.columns
-            = item.city

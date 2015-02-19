@@ -1,1 +1,8 @@
 h1= item.name
+hr
+h3= item.city
+ul
+    each workday, day in item.hours
+        li= day + ": " + workday["open"] + " - " + workday["close"]
+hr
+h3= "Rating: " + item.stars
