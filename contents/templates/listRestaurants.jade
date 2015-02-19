@@ -1,5 +1,3 @@
-extends layout.jade
-
 block content
   table.u-full-width
     thead
@@ -12,6 +10,6 @@ block content
         td
           b
            a(href="#", onClick='viewRestaurant("' + item.business_id + '")')
-            =item.name
+            = item.name
           br
         td= item.stars
