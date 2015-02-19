@@ -1,21 +1,7 @@
-extends layout.jade
-block content
-    div.row
-        each item in restaurants
-            div.six.columns.onecell
-                div.onerow
-                    div.namepiece
-                        a(href='/view/restaurant/' + item.business_id)
-                            = item.name
-                    div.starpiece
-                        = item.stars + " stars"
-                div.onerow
-                    div.hourpiece
-                        each day, dayName in item.hours
-                            div.onerow
-                                = dayName + " "
-                                = day.open + "-"
-                                = day.close
-                    div.onerow
-                        div.addresspiece
-                            = item.full_address
+each item in items
+    div.row 
+        div.six.columns
+            a(href="#", onClick='viewRestuarant("' + item.business_id + '")')
+                = item.name          
+        div.six.columns
+            = item.city
