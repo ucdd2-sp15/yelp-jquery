@@ -5,8 +5,8 @@ block content
     thead
       tr
         th Name
-        th Open (Y/N)
-        th By Appointment Only (Y/N)
+        th Location
+        th Stars
     tbody
     each item in items  
       tr
@@ -14,14 +14,5 @@ block content
           b
             a(href="#", onClick='viewDoctor("' + item.business_id + '")')
               = item.name
-          br
-        td
-            if item.open
-                |Y
-            else
-                |N
-        td
-            if (item.attributes["By Appointment Only"])
-                |Y
-            else
-                |N
+        td= item.city + ", " + item.state
+        td= item.stars
