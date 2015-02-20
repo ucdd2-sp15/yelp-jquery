@@ -1,6 +1,27 @@
-h1= item.name
-hr
-h4= "Average Stars: " + item.average_stars
-ul
-    li= "Yelping since: " + item.yelping_since
-    li= "funny votes: " + item.votes.funny + ", useful votes: " + item.votes.useful + ", cool votes: " + item.votes.cool
+div#example-grid
+	h3(style='text-align: center')= item.name
+	
+	div.twelve.columns(style='text-align: center')
+		div.row
+			div.six.columns 
+				b Yelping Since 
+			div.six.columns
+				=item.yelping_since
+		div.row
+			div.three.columns(style='color: red')
+				b Votes 
+			div.three.columns(style='color: green')
+				='Funny: '+item.votes.funny
+			div.three.columns(style='color: green')
+				='Useful: '+item.votes.useful
+			div.three.columns(style='color: green')
+				='Cool: '+item.votes.cool
+		div.row
+			div.three.columns
+				b Review Count  
+			div.three.columns
+				=item.review_count
+			div.three.columns
+				b Average Stars 
+			div.three.columns
+				=item.average_stars
