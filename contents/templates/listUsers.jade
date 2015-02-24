@@ -8,9 +8,15 @@ block content
         tbody
         each item in items
             tr
+<<<<<<< HEAD
                 td(width="70%")
                    b
                     a(href="#", onClick='viewUser("' + item.id + '")')
+=======
+                td
+                   b
+                    a(href="#", onClick='viewUser("' + item.user_id + '")')
+>>>>>>> b47fcbc3608c33825cc6e3b78a166233eae85259
                       = item.name
                 td= item.review_count
                 td= item.yelping_since

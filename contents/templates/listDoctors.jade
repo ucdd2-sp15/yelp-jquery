@@ -1,4 +1,5 @@
 block content
+<<<<<<< HEAD
     div.row
         div.five.columns 
           b Name
@@ -22,3 +23,22 @@ block content
                     |Y
                 else
                     |N
+=======
+
+
+  table.u-full-width
+    thead
+      tr
+        th Name
+        th Location
+        th Stars
+    tbody
+    each item in items  
+      tr
+        td
+          b
+            a(href="#", onClick='viewDoctor("' + item.business_id + '")')
+              = item.name
+        td= item.city + ", " + item.state
+        td= item.stars
+>>>>>>> b47fcbc3608c33825cc6e3b78a166233eae85259
