@@ -15,17 +15,9 @@ function listUsers(){
             $("#list").html(html)
 
             // load the first doctor to view
-<<<<<<< HEAD
-            viewUsers(users[0].user_id)
-=======
             viewUser(users[0].user_id)
->>>>>>> b47fcbc3608c33825cc6e3b78a166233eae85259
 
         })
 
     })
-<<<<<<< HEAD
-=======
-
->>>>>>> b47fcbc3608c33825cc6e3b78a166233eae85259
 }

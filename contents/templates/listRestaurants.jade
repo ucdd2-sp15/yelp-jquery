@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-extends layout.jade
-
-=======
->>>>>>> b47fcbc3608c33825cc6e3b78a166233eae85259
 block content
   table.u-full-width
     thead
       tr
         th Restaurant
-<<<<<<< HEAD
-=======
-        th Location
->>>>>>> b47fcbc3608c33825cc6e3b78a166233eae85259
         th Stars
     tbody
     each item in items  
@@ -19,12 +10,7 @@ block content
         td
           b
            a(href="#", onClick='viewRestaurant("' + item.business_id + '")')
-<<<<<<< HEAD
             =item.name
           br
-=======
-            = item.name
-          br
-        td= item.city + ", " + item.state
->>>>>>> b47fcbc3608c33825cc6e3b78a166233eae85259
+
         td= item.stars
