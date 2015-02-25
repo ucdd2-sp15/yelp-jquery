@@ -2,6 +2,6 @@
 		div.row
 			div.six.columns
 			a(href="#", onClick='viewUser("' + item.user_id + '")')
-				= items.name
+				= item.name
 			//div.six.columns
 			//	=item.yelping_since

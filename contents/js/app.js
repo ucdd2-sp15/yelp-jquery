@@ -9,3 +9,12 @@ $( "#users" ).on( "click", function( event ) {
 $( "#restaurants" ).on( "click", function( event ) {
     listRestaurants()
 })
+
+$( "#search" ).on( "click", function( event ) {
+    listSearch()
+})
+
+$( "#business" ).on( "click", function( event ) {
+    listBusiness()
+})
+
