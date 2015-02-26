@@ -6,8 +6,6 @@ div.row
     div.two.columns
         strong= "State"
     div.two.columns
-        strong= "Price Range"
-    div.two.columns
         strong= "Stars"
 each item in items  
     div.row
@@ -15,11 +13,8 @@ each item in items
             a(href="#", onClick='viewRestaurant("' + item.business_id + '")')
                 = item.name
         div.two.columns
-            = item.city
+            = item.location.city
         div.two.columns
-            = item.state
+            = item.location.state_code
         div.two.columns
-            ="No Data"
-        div.two.columns
-            = item.stars
-            |  stars
+            img(src=item.rating_img_url, border='0')
