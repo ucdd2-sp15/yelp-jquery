@@ -19,11 +19,7 @@ each item in items
         div.two.columns
             = item.state
         div.two.columns
-            if item.attributes
-                if item.attributes["Price Range"]
-                    = item.attributes["Price Range"]
-                else
-                    ="No Data"
+            ="No Data"
         div.two.columns
             = item.stars
             |  stars
