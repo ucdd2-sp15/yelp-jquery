@@ -2,9 +2,10 @@ function listDoctors(){
 
     console.log('listing doctors')
 
-    $.get("/yelp-jquery/data/doctors.json.data", function(data) {
+    $.get("https://lit-bayou-6850.herokuapp.com/search/term=doctor&location=Boulder", function(data) {
 
-        var doctors = JSON.parse(data)
+        var doctors = data.businesses
+        console.log(data)
 
         $.get("/yelp-jquery/templates/listDoctors.jade", function(template) {
 
