@@ -12,7 +12,7 @@ div.row
 each item in items  
     div.row
         div.four.columns
-            a(href="#", onClick='viewRestaurant("' + item.business_id + '")')
+            a(href="#", onClick='viewRestaurant("' + item.id + '")')
                 = item.name
         div.two.columns
             = item.city

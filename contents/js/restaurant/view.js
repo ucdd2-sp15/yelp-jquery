@@ -4,7 +4,7 @@ function viewRestaurant(business_id){
 
     $.get("https://lit-bayou-6850.herokuapp.com/business/"+ business_id, function(data) {
 
-        var restaurant = _.find(data, {business_id: business_id})
+        var restaurant = data;
 
         $.get("/yelp-jquery/templates/viewRestaurant.jade", function(template) {
 
