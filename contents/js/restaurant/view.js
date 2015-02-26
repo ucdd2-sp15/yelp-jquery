@@ -2,10 +2,9 @@ function viewRestaurant(business_id){
 
     console.log('viewing restaurant id = ', business_id)
 
-    $.get("/yelp-jquery/data/restaurants.json.data", function(data) {
+    $.get("https://lit-bayou-6850.herokuapp.com/business/"+ business_id, function(data) {
 
-        var restaurants = JSON.parse(data)
-        var restaurant = _.find(restaurants, {business_id: business_id})
+        var restaurant = _.find(data, {business_id: business_id})
 
         $.get("/yelp-jquery/templates/viewRestaurant.jade", function(template) {
 
