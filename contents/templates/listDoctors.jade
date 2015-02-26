@@ -16,11 +16,11 @@ each item in items
             a(href="#", onClick='viewDoctor("' + item.business_id + '")')
                 = item.name
         div.two.columns
-            = item.city
+            = item.location.city
         div.one.columns
-            = item.state
+            = item.location.state
         div.one.columns
-            = item.stars
+            img(src=item.rating_img_url, border='0')
         div.three.columns
             if (item.attributes["By Appointment Only"])
                 = "Yes"
