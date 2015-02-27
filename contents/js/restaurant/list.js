@@ -15,7 +15,7 @@ function listRestaurants(){
             $("#list").html(html)
 
             // load the first doctor to view
-            //viewRestaurant(restaurants[0].business_id)
+            viewRestaurant(restaurants[0].id)
 
         })
 
