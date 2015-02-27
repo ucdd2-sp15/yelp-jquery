@@ -1,17 +1,23 @@
 var oauth = OAuth({
     consumer: { 
-        public: '0ZyMoF39-UnoxR9UoMDH9Q',
-        secret: 'pstjrqtLRuEqj8ecYE-xUicSaNo'
+        public: 'PpC6R-ReP2lCXPZVxBvxrg',
+        secret: '79Ppb4Wdx7cfmukBnpLwD86PDv4'
     },
     signature_method: 'HMAC-SHA1'
 })
+var token = {
+    public: 'aNsg_E3KaV1BmH0Y5ylmNWgVlWGnQPsQ',
+    secret: 'fQSciif3B6OAxfKZaKX3sWLCF70'
+}
 var search = {
 
     searchByTerm: function (term){
         var request_data = {
-            url: "http://api.yelp.com/v2/search?term=" + term,
+            url: "http://api.yelp.com/v2/search",
             method: 'GET',
-            data: {}
+            data: {
+                
+            }
         }
     
         console.log('listing term')
@@ -19,8 +25,7 @@ var search = {
         $.ajax({
             url: request_data.url,
             type: request_data.method,
-            data: request_data.data,
-            headers: oauth.toHeader(oauth.authorize(request_data, keys))
+            data: oauth.authorize(request_data, token)
         }).done(function(data) {
 
             var searchKey = JSON.parse(data)
@@ -62,7 +67,7 @@ var search = {
         })
 
         // default search results
-        search.searchByTerm('Food')
+        search.searchByTerm('food')
         
     }
 
