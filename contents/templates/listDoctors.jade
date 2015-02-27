@@ -22,7 +22,8 @@ each item in items
         div.one.columns
             = item.stars
         div.three.columns
-            if (item.attributes["By Appointment Only"])
-                = "Yes"
-            else
-                = "No"
+            if item.attributes
+                if (item.attributes["By Appointment Only"])
+                    = "Yes"
+                else
+                    = "No"

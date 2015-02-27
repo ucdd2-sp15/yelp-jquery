@@ -23,10 +23,11 @@ div.row
    else
      b="CLOSED"
   div.ten.columns
-   if item.attributes["By Appointment Only"] 
-     b="By Appointment Only"
-   else
-     b="Drop-in!"
+   if item.attributes
+    if item.attributes["By Appointment Only"] 
+      b="By Appointment Only"
+    else
+      b="Drop-in!"
 br
 
 //detailed timing information

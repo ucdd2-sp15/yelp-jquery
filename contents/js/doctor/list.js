@@ -15,7 +15,7 @@ function listDoctors(){
             $("#list").html(html)
 
             // load the first doctor to view
-            viewDoctor(doctors[0].business_id)
+            viewDoctor(doctors[0].id)
 
         })
 
