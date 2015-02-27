@@ -16,7 +16,6 @@ function listRestaurants(){
 
             // load the first doctor to view
             viewRestaurant(restaurants[0].id)
-
         })
 
     })
