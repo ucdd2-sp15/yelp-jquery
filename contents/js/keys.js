@@ -1,6 +1,12 @@
 var keys = {
-    consumer: '0ZyMoF39-UnoxR9UoMDH9Q',
-    consumer_secret: 'pstjrqtLRuEqj8ecYE-xUicSaNo',
-    token: 'tmNWnQMbNBtKxLhfgqU2hBG-CTPI4lom',
-    token_secret: 'J7SqmqPC8ERMfXJzmO33KSNvtrg'
+    public: "tmNWnQMbNBtKxLhfgqU2hBG-CTPI4lom",
+    secret: "J7SqmqPC8ERMfXJzmO33KSNvtrg"
 }
+
+var oauth = OAuth({
+    consumer: { 
+        public: '0ZyMoF39-UnoxR9UoMDH9Q',
+        secret: 'pstjrqtLRuEqj8ecYE-xUicSaNo'
+    },
+    signature_method: 'HMAC-SHA1'
+})
