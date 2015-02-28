@@ -5,9 +5,9 @@ block content
         .eight.columns
             form
                 label(for="term")#term_label Term
-                input(type="text")#term_input
+                input(type="search")#term_input
                 label(for="location")#location_label Location
-                input(type="text")#location_input
+                input(type="search")#location_input
             button.button-primary(onclick="search($('#term_input').val(), $('#location_input').val())") Search
             #search
         .four.columns
