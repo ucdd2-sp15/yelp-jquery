@@ -5,8 +5,8 @@ h5= item.rating + ' stars | ' + item.review_count + ' reviews'
 //Display address, hours, and picture
 div.row
 	strong= "Location: "
-div.row
-	for street in item.location.address
+for street in item.location.address
+	div.row
 		= street
 div.row
 	= item.location.city + ", " + item.location.state_code + " " + item.location.postal_code 
