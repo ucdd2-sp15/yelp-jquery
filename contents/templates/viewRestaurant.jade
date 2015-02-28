@@ -1,40 +1,26 @@
 //Display basic info
 h4= item.name
-h5= item.stars + ' stars | ' + item.review_count + ' reviews'
+h5= item.rating + ' stars | ' + item.review_count + ' reviews'
 
 //Display address, hours, and picture
 div.row
-	div.ten.columns= item.full_address
-		br
-		br
-		h5= "Hours"
-		// for val, index in item.hours
-			div.row
-				div.one.column
-				div.five.columns(align='left')
-					b= index
-				div.five.columns= val.open + " - " + val.close
-br
+	strong= "Location: "
+div.row
+	for street in item.location.address
+		= street
+div.row
+	= item.location.city + ", " + item.location.state_code + " " + item.location.postal_code 
 br
 
-//Display additional info (tags)
-// div.row
-	div.ten.columns
-		h5= "More business info"
-		for val, index in item.attributes
-			div.row
-				div.one.column
-				div.seven.columns(align='left')
-					b= index	
-				div.two.columns
-					if typeof(val)=="object"				
-						for val2, index2 in val
-							if val2==true
-								span.button=index2
-					else if val==true
-						= "Yes"
-					else if val==false
-						= "No"
-					else
-						span.button= val
+div.row
+	strong= "Phone:"
+div.row
+	= item.display_phone
+
 br
+
+div.row
+	strong= "Sample Review:"
+	for review in item.reviews
+		div.row
+			= review.excerpt
