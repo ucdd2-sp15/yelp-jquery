@@ -22,3 +22,11 @@ img {
 h2.error {
     color: #ff3442;
 }
+
+.nowrap {
+    white-space: nowrap;
+}
+
+a.active {
+    background-color: #50c3ff;
+}
