@@ -32,10 +32,10 @@ var search = {
 
 
     load: function() {
-        $("#list").empty()
-        $("#details").empty()
         $.get("/yelp-jquery/js/search/ui.jade", function(template) {
             var html = jade.render(template)
+            $("#list").empty()
+            $("#details").empty()
             $("#ui").html(html)
         })
 

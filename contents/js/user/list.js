@@ -10,7 +10,8 @@ function listUsers(){
 
             // render the template
             var html = jade.render(template, {items: users})            
-
+            $("#searchlist").empty()
+            $("#ui").empty()
             // assign the rendered html to the dom element whose id is #list
             $("#list").html(html)
 
