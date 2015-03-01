@@ -1,8 +1,20 @@
-each item in items
-    div.row 
-        div.six.columns
-            // onClick='viewDoctor("PFO7RF1xz4ZBuaq46KsLpA")'
-            a(href="#", onClick='viewDoctor("' + item.business_id + '")')
-                = item.name          
-        div.six.columns
-            = item.city
+div.row
+    div.four.columns
+        strong= "Name"
+    div.two.columns
+        strong= "City"
+    div.two.columns
+        strong= "State"
+    div.two.columns
+        strong= "Stars"
+each item in items  
+    div.row
+        div.four.columns
+            a(href="#", onClick='viewRestaurant("' + item.id + '")')
+                = item.name
+        div.two.columns
+            = item.location.city
+        div.two.columns
+            = item.location.state_code
+        div.two.columns
+            img(src=item.rating_img_url, border='0')

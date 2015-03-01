@@ -1,1 +1,27 @@
-h1= item.name
+//Display basic info
+h4= item.name
+h5= item.rating + ' stars | ' + item.review_count + ' reviews'
+
+//Display address, hours, and picture
+div.row
+	strong= "Location: "
+for street in item.location.address
+	div.row
+		= street
+
+div.row
+	= item.location.city + ", " + item.location.state_code + " " + item.location.postal_code 
+br
+
+div.row
+	strong= "Phone:"
+div.row
+	= item.display_phone
+
+br
+
+div.row
+	strong= "Sample Review:"
+	for review in item.reviews
+		div.row
+			= review.excerpt
