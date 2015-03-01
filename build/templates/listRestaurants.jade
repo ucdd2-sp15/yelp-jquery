@@ -1,5 +1,3 @@
-extends layout.jade
-
 block content
   table.u-full-width
     thead
@@ -7,11 +5,12 @@ block content
         th Restaurant
         th Stars
     tbody
-    each item in items  
+    each item in items.businesses
       tr
         td
           b
-           a(href="#", onClick='viewRestaurant("' + item.business_id + '")')
+           a(href= item.url)
             =item.name
           br
-        td= item.stars
+
+        td= item.rating
