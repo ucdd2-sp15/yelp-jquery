@@ -2,21 +2,13 @@ h5 Search
 .row
     .col-md-8
         .form-group.form-group-default
-            label Business Name           
-            input#name.form-control(type='text', required='')                
+            label Business Id           
+            input#id.form-control(type='text', required='')                
     .col-md-4                         
-        button.btn.btn-primary(onClick='business.searchByName($("#name").val())') Search
+        button.btn.btn-primary(onClick='business.searchById($("#id").val())') Search
 
-.row
-    .col-md-8
-        .form-group.form-group-default
-            label Category            
-            input#category.form-control(type='text', required='')                
-    .col-md-4                         
-        button.btn.btn-primary(onClick='business.searchByCategory($("#bill-id").val())') Search
-
-h5 Business Name
+h5 Examples
 ul
     li
-        a(href="#" onClick='business.searchByName("Urban Curry")') Urban Curry
+        a(href="#" onClick='business.searchById("yelp-san-francisco")') yelp-san-francisco
 

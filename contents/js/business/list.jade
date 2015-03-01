@@ -1,12 +1,15 @@
-h3 Results
-table.table.table-striped
+table.u-full-width
     thead
         tr
             th Name
+            th Rating
+            th Address
+            th Phone
     tbody
-        each item in data.results
-            tr
-                td 
-                    = item.name
-
-
+        tr
+            td
+                a(href=data.url)
+                    = data.name
+            td= data.rating
+            td= data.location.address[0]
+            td= data.display_phone
