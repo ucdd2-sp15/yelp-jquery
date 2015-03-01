@@ -1,68 +1,27 @@
-// display the detail of the first item
-//Doctor's name and stars
-div.row
-div.twelve.columns
-    h3=item.name
-    span.i.fa.fa-star.fa-lg
-    span.i.fa.fa-star.fa-lg
-    span.i.fa.fa-star.fa-lg
-    span.i.fa.fa-star-half.fa-lg
-  div.ten.columns
-    h5=item.review_count + ' Reviews'
+//Display basic info
+h4= item.name
+h5= item.rating + ' stars | ' + item.review_count + ' reviews'
 
-
-//Timing information
-h4 Timings
-h6 ____________________________________________________________________________
+//Display address, hours, and picture
 div.row
-  div.four.column 
-   h6 Status:
-  div.four.column
-   if item.open 
-     b="OPEN"
-   else
-     b="CLOSED"
-  div.ten.columns
-   if item.attributes
-    if item.attributes["By Appointment Only"] 
-      b="By Appointment Only"
-    else
-      b="Drop-in!"
+	strong= "Location: "
+for street in item.location.address
+	div.row
+		= street
+
+div.row
+	= item.location.city + ", " + item.location.state_code + " " + item.location.postal_code 
 br
 
-//detailed timing information
 div.row
- div.five.columns
-  h5 Day 
- div.three.columns 
-  h5 Open
- div.three.columns
-  h5 Close
+	strong= "Phone:"
+div.row
+	= item.display_phone
 
-if item.hours
-  each day,index in item.hours
-    div.row
-      div.five.columns
-        b= index
-      div.three.columns
-        h6=day.open + ' AM'
-      div.three.columns
-        h6=day.close + ' PM'
-h6 ____________________________________________________________________________
-//location
-h3 Location
+br
+
 div.row
-    div.one.column
-    div.four.column
-      b="Address: "
-    div.ten.columns= item.full_address
-div.row
-    div.one.column
-    div.four.column
-      b="City: "
-    div.three.columns= item.city
-div.row
-    div.one.column
-    div.four.column
-      b="State: "
-    div.three.columns= item.state
+	strong= "Sample Review:"
+	for review in item.reviews
+		div.row
+			= review.excerpt
