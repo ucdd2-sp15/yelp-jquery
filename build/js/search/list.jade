@@ -1,0 +1,14 @@
+table.u-full-width
+	thead
+		tr
+			th Restaurant
+			th Stars
+	tbody
+	each item in data.businesses
+		tr
+			td
+				b
+					a(href= item.url)
+						=item.name
+				br
+			td= item.rating
