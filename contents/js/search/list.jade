@@ -1,0 +1,16 @@
+table.u-full-width
+    thead
+        tr
+            th Name
+            th Rating
+            th Address
+            th Phone
+    tbody
+    each item in data
+        tr
+            td
+                a(href=item.url)
+                    = item.name
+            td= item.rating
+            td= item.location.address
+            td= item.display_phone

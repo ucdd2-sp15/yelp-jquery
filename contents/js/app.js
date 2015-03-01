@@ -11,10 +11,10 @@ $( "#restaurants" ).on( "click", function( event ) {
 })
 
 $( "#search" ).on( "click", function( event ) {
-    listSearch()
+    search.load()
 })
 
 $( "#business" ).on( "click", function( event ) {
-    listBusiness()
+    business.load()
 })
 
