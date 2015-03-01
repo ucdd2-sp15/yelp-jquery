@@ -19,7 +19,7 @@ var business = {
 
         $.get("/yelp-jquery/js/business/ui.jade", function(template) {
             var html = jade.render(template)
-            $("#list").html(html)
+            $("#searchdiv").html(html)
             
         })
 
