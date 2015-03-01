@@ -1,0 +1,16 @@
+table.u-full-width
+    thead
+        tr
+            th Name
+            th Review Count
+            th Fans
+            th Average Stars
+    tbody
+        each item in items
+            tr
+                td
+                    a(href="#", onClick='viewUser("' + item.user_id + '")')
+                        = item.name
+                td= item.review_count
+                td= item.fans
+                td= item.average_stars
