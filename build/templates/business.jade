@@ -1,4 +1,51 @@
-//
-   Created by jake on 2/27/15.
 
-h1= item.id
+h4(style='text-align: center')= item.name
+div.container(style='text-align: center;background-color: #add8e6; border: 3px solid #D1D1D1')
+	div#example-grid
+		div.row
+			div.four.columns
+				b Rating
+			div.eight.columns
+				=item.rating + " stars"
+		div.row
+			div.four.columns
+				b Business Image
+			div.eight.columns 
+				img(src=item.image_url width="200" height="128")
+		div.row
+			div.four.columns 
+				b Address:
+			div.eight.columns
+				=item.location.display_address
+		div.row
+			div.four.columns
+				b Phone  
+			div.eight.columns
+				=item.display_phone	
+		div.row
+			div.four.columns
+				b Business URL
+			div.eight.columns 
+				a(href=item.url)
+					=item.url
+		div.row
+			div.four.columns
+				b Menu Provider 
+			div.eight.columns
+				if (item.menu_provider)
+					=item.menu_provider
+				else
+					| N/A
+		div.row
+			div.four.columns
+				b Review count 
+			div.eight.columns
+				if (item.review_count)
+					=item.review_count
+				else
+					| N/A
+		div.row
+			div.four.columns
+				b Is closed 
+			div.eight.columns
+				=item.is_closed
