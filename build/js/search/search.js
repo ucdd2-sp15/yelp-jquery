@@ -35,6 +35,9 @@ function search(term, location) {
             });
         } else {
 
+            // Loading...
+
+
             // Get our local search template to render
             $.get("/yelp-jquery/templates/search.jade", function(template) {
                 html = jade.render(template, {items: data.businesses});

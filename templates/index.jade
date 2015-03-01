@@ -10,6 +10,8 @@ block content
                             input(type="search", placeholder="search term")#term_input.u-full-width
                         .nowrap
                             input(type="search", placeholder="location (city, zip, etc.)")#location_input.u-full-width
+                    // This button needs to be outside the form.  Otherwise,
+                    // if it is inside, the page will refresh when you click it.
                     button.button-primary.u-full-width(onclick="search($('#term_input').val(), $('#location_input').val())") Search
                 .six.columns
                     #image
