@@ -1,0 +1,14 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Business Id           
+            input#id.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='business.searchById($("#id").val())') Search
+
+h5 Examples
+ul
+    li
+        a(href="#" onClick='business.searchById("yelp-san-francisco")') yelp-san-francisco
+
