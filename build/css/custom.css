@@ -18,3 +18,15 @@ img {
 	border: 1px #aaa solid;
 	padding: 2px;
 }
+
+h2.error {
+    color: #ff3442;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+a.active {
+    background-color: #50c3ff;
+}

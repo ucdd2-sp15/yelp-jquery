@@ -1,1 +1,5 @@
 h1= item.name
+hr
+ul
+    each workday, day in item.hours
+        li= day + ": " + workday["open"] + " - " + workday["close"]
