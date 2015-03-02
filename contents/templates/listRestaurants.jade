@@ -3,15 +3,14 @@ block content
     thead
       tr
         th Restaurant
-        th Location
         th Stars
     tbody
-    each item in items  
+    each item in items.businesses
       tr
         td
           b
-           a(href="#", onClick='viewRestaurant("' + item.business_id + '")')
-            = item.name
+           a(href= item.url)
+            =item.name
           br
-        td= item.city + ", " + item.state
-        td= item.stars
+
+        td= item.rating

@@ -1,0 +1,9 @@
+img(src=item.image_url height="80" width="80")
+div.row
+	b= item.name
+div.row= 'Phone: ' + item.phone
+div.row
+	a(href=item.url)
+		=item.url
+div.row= 'Rating: ' + item.rating
+img(src=item.rating_img_url_small)

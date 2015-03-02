@@ -1,18 +1,24 @@
-block content
-
-
-  table.u-full-width
-    thead
-      tr
-        th Name
-        th Location
-        th Stars
-    tbody
-    each item in items  
-      tr
-        td
-          b
-            a(href="#", onClick='viewDoctor("' + item.business_id + '")')
-              = item.name
-        td= item.city + ", " + item.state
-        td= item.stars
+block conten
+    div.row
+        div.five.columns 
+          b Name
+        div.two.columns 
+          b Open(Y/N)
+        div.four.columns 
+          b By Appointment Only(Y/N) 
+    each item in items
+        div.row
+            div.five.columns
+                b
+                 a(href="#", onClick='viewDoctor("' + item.business_id + '")')
+                    = item.name
+            div.two.columns
+                if item.open
+                    |Y
+                else
+                    |N
+            div.four.columns
+                if (item.attributes["By Appointment Only"])
+                    |Y
+                else
+                    |N
