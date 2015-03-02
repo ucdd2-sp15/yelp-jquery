@@ -13,7 +13,9 @@ html(lang='en')
   body
 
     div.container
-        h1 Yelp
+        h1
+            a(href='/yelp-jquery/')#title
+                = "Yelp"
         include navbar
 
     div#content
@@ -32,4 +34,6 @@ html(lang='en')
     script(src="js/restaurant/view.js")    
     script(src="js/user/list.js")
     script(src="js/user/view.js")    
+    script(src="js/search/search.js")
     script(src="js/app.js")
+    

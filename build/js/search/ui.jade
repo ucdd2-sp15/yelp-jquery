@@ -1,0 +1,28 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Term            
+            input#term.form-control(type='text', required='')
+            label Location
+            input#location.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='search.searchByTerm($("#term").val(), $("#location").val())') Search
+
+h5 Term&Location
+.row
+    button.btn.btn-primary(onClick='search.searchByTerm("Food", "San Francisco")') Food in San Francisco
+.row
+    button.btn.btn-primary(onClick='search.searchByTerm("shopping", "boulder")') Shopping in Boulder
+.row
+    button.btn.btn-primary(onClick='search.searchByTerm("bowling", "denver")') Bowling in Denver
+
+h5 Business
+.row
+    button.btn.btn-primary(onClick='search.searchByBusiness("yelp-san-francisco")') Yelp San Francisco
+.row
+    button.btn.btn-primary(onClick='search.searchByBusiness("the-buff-restaurant-boulder")') The Buff Restaurant
+.row
+    button.btn.btn-primary(onClick='search.searchByBusiness("boxcar-coffee-roasters-boulder")') Boxcar Coffee Roasters
+.row
+    button.btn.btn-primary(onClick='search.searchByBusiness("amu-boulder")') Amu

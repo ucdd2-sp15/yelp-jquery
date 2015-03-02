@@ -1,1 +1,43 @@
-h1= item.name
+h2= item.name
+
+//Doctor's name and stars
+div.row
+    h4=item.review_count + ' Reviews | ' + item.stars + ' Stars'
+
+div.row
+    div.four.columns
+        h5= "Status:"
+    div.three.columns
+        if item.open 
+            b="OPEN"
+        else
+            b="CLOSED"
+    div.five.columns
+        if item.attributes["By Appointment Only"] 
+            h6="By Appointment Only"
+        else
+            h6="Drop-in!"
+br
+
+div.row
+    div.four.columns
+        h5 Day 
+    div.four.columns 
+        h5 Open
+    div.four.columns
+        h5 Close
+
+    each day,index in item.hours
+        div.row
+            div.four.columns
+                b= index
+            div.four.columns
+                h6=day.open + ' AM'
+            div.four.columns
+                h6=day.close + ' PM'
+br
+
+div.row
+    h5="Address: "
+    div.eight.columns= item.full_address
+
